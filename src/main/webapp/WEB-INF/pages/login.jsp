@@ -1,13 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="demo.views.ViewHelper" %>
 <html>
 <head>
     <meta charset="UTF-8"/>
 </head>
 <body>
-<div>messages and tips</div>
+<div><%= ViewHelper.null2empty(request.getAttribute("message")) %></div>
 
 <h1>My Book System</h1>
-<form>
+<form action="/login" method="post">
     <div>
         <label>Username</label>
         <input type="text" name="username"/>

@@ -18,6 +18,6 @@ public class UpdateBookServlet extends HttpServlet {
         book.setTitle(req.getParameter("title"));
         book.setDescription(req.getParameter("description"));
         InMemoryDao.update(book);
-        resp.sendRedirect("/list-books.html");
+        resp.sendRedirect("/list-books.html?message=Operation successful");
     }
 }

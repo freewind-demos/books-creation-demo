@@ -14,7 +14,7 @@ public class DeleteBookServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Long id = Long.parseLong(req.getParameter("id"));
         InMemoryDao.deleteById(id);
-        resp.sendRedirect("/list-books.html");
+        resp.sendRedirect("/list-books.html?message=Operation successful");
     }
 
 }

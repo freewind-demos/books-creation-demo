@@ -15,6 +15,7 @@ public class ListBooksPageServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Book> books = InMemoryDao.getBooks();
+        request.setAttribute("message", request.getParameter("message"));
         request.setAttribute("books", books);
         request.getRequestDispatcher("/WEB-INF/pages/list.jsp").forward(request, response);
     }

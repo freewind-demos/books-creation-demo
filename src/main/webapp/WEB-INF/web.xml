@@ -2,6 +2,48 @@
 <web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
-http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+         http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <servlet>
+        <servlet-name>CreateBookPageServlet</servlet-name>
+        <servlet-class>demo.views.CreateBookPageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditBookPageServlet</servlet-name>
+        <servlet-class>demo.views.EditBookPageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginPageServlet</servlet-name>
+        <servlet-class>demo.views.LoginPageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListBooksPageServlet</servlet-name>
+        <servlet-class>demo.views.ListBooksPageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowBookPageServlet</servlet-name>
+        <servlet-class>demo.views.ShowBookPageServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>LoginPageServlet</servlet-name>
+        <url-pattern>/login.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListBooksPageServlet</servlet-name>
+        <url-pattern>/list-books.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateBookPageServlet</servlet-name>
+        <url-pattern>/create-book.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditBookPageServlet</servlet-name>
+        <url-pattern>/edit-book.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowBookPageServlet</servlet-name>
+        <url-pattern>/show-book.html</url-pattern>
+    </servlet-mapping>
 
 </web-app>

@@ -6,7 +6,7 @@
     <meta charset="UTF-8"/>
 </head>
 <body>
-<h1>Book #1</h1>
+<h1>Book #<%=book.getId()%></h1>
 <form>
     <div>
         <%= book.getTitle() %>

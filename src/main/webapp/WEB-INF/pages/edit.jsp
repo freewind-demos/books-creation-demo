@@ -7,7 +7,8 @@
 </head>
 <body>
 <h1>Edit Book</h1>
-<form>
+<form action="/update-book" method="post">
+    <input type="hidden" name="id" value="<%=book.getId()%>"/>
     <div>
         <label>Title</label>
         <input type="text" name="title" value="<%= book.getTitle() %>"/>

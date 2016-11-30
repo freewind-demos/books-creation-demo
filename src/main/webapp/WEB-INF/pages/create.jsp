@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>Create New Book</h1>
-<form>
+<form action="/create-book" method="post">
     <div>
         <label>Title</label>
         <input type="text" name="title"/>

@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="demo.models.Book" %>
+<% Book book = (Book)request.getAttribute("book"); %>
 <html>
 <head>
     <meta charset="UTF-8"/>
@@ -7,10 +9,10 @@
 <h1>Book #1</h1>
 <form>
     <div>
-        Java编程思想
+        <%= book.getTitle() %>
     </div>
     <div>
-        学Java的一本好书
+        <%= book.getDescription() %>
     </div>
 </form>
 </body>

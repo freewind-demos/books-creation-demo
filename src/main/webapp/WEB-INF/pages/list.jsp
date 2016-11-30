@@ -1,4 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.util.List" %>
+<%@ page import="demo.models.Book" %>
+<% List<Book> books = (List<Book>)request.getAttribute("books"); %>
 <html>
 <head>
     <meta charset="UTF-8"/>
@@ -17,24 +20,17 @@
         <th>Description</th>
         <th>Operations</th>
     </tr>
+    <% for(Book book: books) { %>
     <tr>
-        <td>Java编程思想</td>
-        <td>学Java的一本好书</td>
+        <td><%= book.getTitle() %></td>
+        <td><%= book.getDescription() %></td>
         <td>
             <span>Show</span>
             <span>Edit</span>
             <span>Delete</span>
         </td>
     </tr>
-    <tr>
-        <td>JavaScript语言精粹</td>
-        <td>学JavaScript的一本好书</td>
-        <td>
-            <span>Show</span>
-            <span>Edit</span>
-            <span>Delete</span>
-        </td>
-    </tr>
+    <% } %>
 </table>
 <p>
     <a>Create New Book</a>

@@ -1,11 +1,13 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ page import="demo.views.ViewHelper" %>
+<% String message = (String)request.getAttribute("message"); %>
 <html>
 <head>
     <meta charset="UTF-8"/>
 </head>
 <body>
-<div><%= ViewHelper.null2empty(request.getAttribute("message")) %></div>
+<% if(message!=null) { %>
+<div><%= message %></div>
+<% } %>
 
 <h1>My Book System</h1>
 <form action="/login" method="post">

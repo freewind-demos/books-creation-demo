@@ -5,14 +5,6 @@
          http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
     <servlet>
-        <servlet-name>CreateBookPageServlet</servlet-name>
-        <servlet-class>demo.views.CreateBookPageServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>EditBookPageServlet</servlet-name>
-        <servlet-class>demo.views.EditBookPageServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>LoginPageServlet</servlet-name>
         <servlet-class>demo.views.LoginPageServlet</servlet-class>
     </servlet>
@@ -20,26 +12,10 @@
         <servlet-name>ListBooksPageServlet</servlet-name>
         <servlet-class>demo.views.ListBooksPageServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>ShowBookPageServlet</servlet-name>
-        <servlet-class>demo.views.ShowBookPageServlet</servlet-class>
-    </servlet>
 
-    <servlet>
-        <servlet-name>IndexPageServlet</servlet-name>
-        <servlet-class>demo.actions.IndexPageServlet</servlet-class>
-    </servlet>
     <servlet>
         <servlet-name>CreateBookServlet</servlet-name>
         <servlet-class>demo.actions.CreateBookServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>UpdateBookServlet</servlet-name>
-        <servlet-class>demo.actions.UpdateBookServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>DeleteBookServlet</servlet-name>
-        <servlet-class>demo.actions.DeleteBookServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
@@ -57,36 +33,12 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ListBooksPageServlet</servlet-name>
-        <url-pattern>/list-books.html</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>CreateBookPageServlet</servlet-name>
-        <url-pattern>/create-book.html</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>EditBookPageServlet</servlet-name>
-        <url-pattern>/edit-book.html</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ShowBookPageServlet</servlet-name>
-        <url-pattern>/show-book.html</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>IndexPageServlet</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>CreateBookServlet</servlet-name>
         <url-pattern>/create-book</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>UpdateBookServlet</servlet-name>
-        <url-pattern>/update-book</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>DeleteBookServlet</servlet-name>
-        <url-pattern>/delete-book</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -103,7 +55,7 @@
         <init-param>
             <param-name>public-paths</param-name>
             <param-value>
-                /,/login.html,/login,/logout
+                /login.html,/login,/logout
             </param-value>
         </init-param>
     </filter>
